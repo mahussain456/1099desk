@@ -34,9 +34,11 @@ export function InvoicePreview({ data }: { data: InvoiceData }) {
                 className="mb-5 max-h-16 max-w-44 rounded-md bg-white object-contain p-2"
               />
             ) : (
-              <div className="mb-5 grid h-14 w-14 place-items-center rounded-md bg-white text-xl font-black text-slate-950">
-                1099
-              </div>
+              <img
+                src="/brand/1099desk-mark.svg"
+                alt="1099desk logo"
+                className="mb-5 h-16 w-16 rounded-xl bg-white object-contain"
+              />
             )}
             <h2 id="invoice-preview" className="text-3xl font-black">
               Invoice

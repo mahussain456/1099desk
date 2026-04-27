@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Inter, Roboto_Mono } from "next/font/google";
-import { FileText, ShieldCheck } from "lucide-react";
+import { ShieldCheck } from "lucide-react";
 import { AnalyticsConsent } from "@/components/providers/AnalyticsConsent";
 import { AxeDev } from "@/components/providers/AxeDev";
 import { CookieBanner } from "@/components/legal/CookieBanner";
@@ -23,6 +23,11 @@ export const metadata: Metadata = {
   title: "1099desk - Financial Calculators for US Freelancers",
   description: "Free estimated tax, invoice, rate, and project calculators for US freelancers.",
   alternates: { canonical: "/" },
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/brand/1099desk-mark.svg",
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -40,11 +45,11 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-white focus:p-3">
           Skip to content
         </a>
-        <header className="sticky top-0 z-40 border-b border-stone-200/80 bg-[#fffdf8]/88 backdrop-blur-xl">
+        <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 backdrop-blur-xl">
           <nav className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-4 py-3" aria-label="Primary">
-            <a href="/" className="group inline-flex items-center gap-3 text-lg font-black text-stone-950 no-underline">
-              <span className="grid h-10 w-10 place-items-center rounded-md bg-stone-950 text-white shadow-lg shadow-stone-900/15">
-                <FileText aria-hidden="true" className="h-5 w-5" />
+            <a href="/" className="group inline-flex items-center gap-3 text-lg font-black text-slate-950 no-underline">
+              <span className="grid h-11 w-11 place-items-center overflow-hidden rounded-xl bg-[#07110f] shadow-lg shadow-slate-900/15">
+                <img src="/brand/1099desk-mark.svg" alt="" aria-hidden="true" className="h-full w-full" />
               </span>
               <span>
                 1099desk
@@ -52,10 +57,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               </span>
             </a>
             <div className="flex flex-wrap items-center gap-2 text-sm font-bold">
-              <a className="rounded-md px-3 py-2 text-stone-700 no-underline hover:bg-stone-100" href="/self-employment-tax-calculator">SE Tax</a>
-              <a className="rounded-md px-3 py-2 text-stone-700 no-underline hover:bg-stone-100" href="/quarterly-estimated-tax-calculator">Quarterly Tax</a>
-              <a className="rounded-md px-3 py-2 text-stone-700 no-underline hover:bg-stone-100" href="/invoice-generator">Invoice</a>
-              <a className="rounded-md px-3 py-2 text-stone-700 no-underline hover:bg-stone-100" href="/about">About</a>
+              <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/self-employment-tax-calculator">SE Tax</a>
+              <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/quarterly-estimated-tax-calculator">Quarterly Tax</a>
+              <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/invoice-generator">Invoice</a>
+              <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/about">About</a>
               <span className="hidden items-center gap-2 rounded-md border border-teal-700/20 bg-teal-50 px-3 py-2 text-teal-900 md:inline-flex">
                 <ShieldCheck aria-hidden="true" className="h-4 w-4" />
                 Compliance-first

@@ -1,0 +1,21 @@
+<svg width="2000" height="720" viewBox="0 0 2000 720" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">1099desk Deskline Cipher Light Logo</title>
+  <desc id="desc">Light-background version of the 1099desk deskline cipher logo.</desc>
+  <rect width="2000" height="720" rx="72" fill="#FFFFFF"/>
+  <path d="M98 98H1902V622H98V98Z" stroke="#DBE3E6" stroke-width="2"/>
+
+  <g transform="translate(190 150)">
+    <rect x="0" y="0" width="420" height="420" rx="96" fill="#07110F"/>
+    <text x="54" y="214" fill="#F8FAFC" font-family="Inter, Arial, Helvetica, sans-serif" font-size="126" font-weight="920" letter-spacing="-10">1099</text>
+    <path d="M74 258H344" stroke="#8EA4B2" stroke-width="20" stroke-linecap="round"/>
+    <path d="M74 294H248" stroke="#5EEAD4" stroke-width="10" stroke-linecap="round"/>
+    <path d="M284 112H350" stroke="#2563EB" stroke-width="13" stroke-linecap="round"/>
+    <path d="M48 48H372V372H48V48Z" stroke="#18312D" stroke-width="2"/>
+  </g>
+
+  <g transform="translate(720 222)">
+    <text x="0" y="130" fill="#07110F" font-family="Inter, Arial, Helvetica, sans-serif" font-size="156" font-weight="860" letter-spacing="-7">1099desk</text>
+    <path d="M10 174H606" stroke="#0F766E" stroke-width="3"/>
+    <text x="4" y="232" fill="#475569" font-family="Inter, Arial, Helvetica, sans-serif" font-size="32" font-weight="760" letter-spacing="7">FREELANCE FINANCE SUITE</text>
+  </g>
+</svg>
