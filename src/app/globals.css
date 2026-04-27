@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f3ee;
-  --foreground: #15130f;
-  --muted: #5b554b;
+  --background: #f7f8f8;
+  --foreground: #0f172a;
+  --muted: #475569;
   --brand: #0f766e;
   --brand-dark: #134e4a;
-  --ink: #171717;
-  --paper: #fffdf8;
-  --line: #e4ded3;
-  --gold: #b7791f;
-  --coral: #b4533c;
-  --indigo: #4338ca;
+  --ink: #0f172a;
+  --paper: #ffffff;
+  --line: #dbe3e6;
+  --gold: #8a6f2f;
+  --coral: #9f4d3d;
+  --indigo: #3949ab;
 }
 
 @theme inline {
@@ -32,8 +32,8 @@ html {
 body {
   min-height: 100vh;
   background:
-    linear-gradient(135deg, rgba(15, 118, 110, 0.09) 0 12%, transparent 12% 100%),
-    linear-gradient(180deg, #fbf8f1 0%, var(--background) 48%, #f7f1e8 100%);
+    linear-gradient(135deg, rgba(15, 118, 110, 0.045) 0 12%, transparent 12% 100%),
+    linear-gradient(180deg, #ffffff 0%, var(--background) 52%, #eef3f4 100%);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
@@ -63,22 +63,22 @@ a:hover {
 }
 
 .premium-shell {
-  border: 1px solid rgba(69, 59, 45, 0.12);
-  background: rgba(255, 253, 248, 0.84);
-  box-shadow: 0 24px 70px rgba(54, 47, 35, 0.10);
+  border: 1px solid rgba(15, 23, 42, 0.10);
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.10);
   backdrop-filter: blur(18px);
 }
 
 .premium-card {
-  border: 1px solid rgba(69, 59, 45, 0.12);
+  border: 1px solid rgba(15, 23, 42, 0.10);
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.90), rgba(255, 253, 248, 0.94)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(248, 250, 252, 0.98)),
     var(--paper);
-  box-shadow: 0 18px 45px rgba(54, 47, 35, 0.08);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
 }
 
 .premium-input {
-  border: 1px solid #bfb5a6;
+  border: 1px solid #bcc8d2;
   background: rgba(255, 255, 255, 0.88);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75);
 }
@@ -99,15 +99,25 @@ a:hover {
 
 .surface-grid {
   background-image:
-    linear-gradient(rgba(20, 20, 20, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(20, 20, 20, 0.055) 1px, transparent 1px);
+    linear-gradient(rgba(15, 23, 42, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.055) 1px, transparent 1px);
   background-size: 42px 42px;
 }
 
-.hero-mask {
+.hero-field {
   background:
-    linear-gradient(90deg, rgba(7, 8, 6, 0.88) 0%, rgba(7, 8, 6, 0.68) 43%, rgba(7, 8, 6, 0.22) 72%, rgba(7, 8, 6, 0.52) 100%),
-    linear-gradient(180deg, rgba(7, 8, 6, 0.18) 0%, rgba(7, 8, 6, 0.02) 55%, rgba(7, 8, 6, 0.82) 100%);
+    linear-gradient(120deg, rgba(20, 184, 166, 0.13) 0 18%, transparent 18% 100%),
+    linear-gradient(150deg, transparent 0 54%, rgba(59, 130, 246, 0.10) 54% 68%, transparent 68% 100%),
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    #07110f;
+  background-size: auto, auto, 56px 56px, 56px 56px, auto;
+}
+
+.dashboard-frame {
+  box-shadow:
+    0 32px 90px rgba(0, 0, 0, 0.36),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .ticker-track {
