@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 export function AnalyticsConsent() {
   const [consent, setConsent] = useState(false);
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID ?? gaId;
   const adsenseId = process.env.NEXT_PUBLIC_ADSENSE_ID;
 
   useEffect(() => {
@@ -19,15 +20,15 @@ export function AnalyticsConsent() {
 
   return (
     <>
-      {gaId ? (
+      {googleTagId ? (
         <>
-          <Script src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`} strategy="afterInteractive" />
-          <Script id="ga4-consented" strategy="afterInteractive">
+          <Script src={`https://www.googletagmanager.com/gtag/js?id=${googleTagId}`} strategy="afterInteractive" />
+          <Script id="google-tag-consented" strategy="afterInteractive">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${gaId}', {
+              gtag('config', '${googleTagId}', {
                 anonymize_ip: true,
                 allow_google_signals: false,
                 allow_ad_personalization_signals: false
