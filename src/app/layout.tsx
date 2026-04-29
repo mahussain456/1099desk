@@ -23,6 +23,9 @@ export const metadata: Metadata = {
   title: "1099desk - Financial Calculators for US Freelancers",
   description: "Free estimated tax, invoice, rate, and project calculators for US freelancers.",
   alternates: { canonical: "/" },
+  verification: {
+    google: "uYoesI3DN-5IxZxUoneJdKRgIqQq2O2ox3tpDFfkjZU",
+  },
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
