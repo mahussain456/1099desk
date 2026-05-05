@@ -9,6 +9,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/blog/how-much-should-freelancers-set-aside-for-taxes",
     "/blog/freelance-hourly-rate-guide",
     "/blog/quarterly-tax-guide-for-1099-workers",
+    "/blog/invoice-guide-for-freelancers",
+    "/blog/1099-vs-w2-guide",
     "/self-employment-tax-calculator",
     "/quarterly-estimated-tax-calculator",
     "/freelance-hourly-rate-calculator",
@@ -21,6 +23,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/cookies",
     "/affiliate-disclosure",
     "/about",
+    "/contact",
   ];
   return paths.map((path) => ({ url: `${siteUrl}${path}`, lastModified: new Date("2026-01-01") }));
 }

@@ -19,6 +19,18 @@ const guides = [
       "A plain-English guide to quarterly estimated payments, safe harbor concepts, and cash-flow planning for contractors.",
     href: "/blog/quarterly-tax-guide-for-1099-workers",
   },
+  {
+    title: "Invoice Guide for Freelancers",
+    description:
+      "A practical guide to freelancer invoices, payment terms, client-ready PDFs, and what a basic invoice should include.",
+    href: "/blog/invoice-guide-for-freelancers",
+  },
+  {
+    title: "1099 vs W2 Guide",
+    description:
+      "A practical guide to comparing 1099 contractor income with W2 salary, benefits, taxes, and risk.",
+    href: "/blog/1099-vs-w2-guide",
+  },
 ];
 
 export const metadata: Metadata = {
@@ -42,7 +54,7 @@ export default function BlogIndexPage() {
         </p>
       </div>
 
-      <div className="mt-10 grid gap-4 md:grid-cols-3">
+      <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
         {guides.map((guide) => (
           <a key={guide.href} href={guide.href} className="premium-card rounded-xl p-5 text-slate-950 no-underline transition hover:-translate-y-0.5">
             <p className="text-xl font-black">{guide.title}</p>

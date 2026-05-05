@@ -4,6 +4,7 @@ const links = [
   ["Cookies", "/cookies"],
   ["Affiliate Disclosure", "/affiliate-disclosure"],
   ["About", "/about"],
+  ["Contact", "/contact"],
 ];
 
 export function LegalFooter() {

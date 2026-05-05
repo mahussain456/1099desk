@@ -76,6 +76,16 @@ const guideCards = [
     "A plain-English planning guide for estimated payments, safe harbor rules, and cash flow.",
     "/blog/quarterly-tax-guide-for-1099-workers",
   ],
+  [
+    "Invoice guide for freelancers",
+    "What a client-ready invoice should include and how to keep billing organized.",
+    "/blog/invoice-guide-for-freelancers",
+  ],
+  [
+    "1099 vs W2 guide",
+    "Compare taxes, benefits, flexibility, and risk before choosing a work structure.",
+    "/blog/1099-vs-w2-guide",
+  ],
 ];
 
 export default function Home() {
@@ -389,7 +399,7 @@ export default function Home() {
             <ArrowRight aria-hidden="true" className="h-4 w-4" />
           </a>
         </div>
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {guideCards.map(([title, copy, href]) => (
             <a key={href} href={href} className="premium-card rounded-xl p-5 text-slate-950 no-underline transition hover:-translate-y-0.5">
               <p className="text-lg font-black">{title}</p>

@@ -80,6 +80,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/invoice-generator">Invoice</a>
               <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/blog">Guides</a>
               <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/about">About</a>
+              <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/contact">Contact</a>
               <span className="hidden items-center gap-2 rounded-md border border-teal-700/20 bg-teal-50 px-3 py-2 text-teal-900 md:inline-flex">
                 <ShieldCheck aria-hidden="true" className="h-4 w-4" />
                 Compliance-first
