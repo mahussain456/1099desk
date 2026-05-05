@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About 1099desk | Freelancer Tax and Pricing Tools",
+  description:
+    "Learn what 1099desk does, who it helps, and how its freelancer tax, pricing, and invoice tools are maintained.",
+  alternates: { canonical: "/about" },
+};
+
 export default function AboutPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-10 prose-readable">

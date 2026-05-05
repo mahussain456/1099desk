@@ -19,7 +19,7 @@ const geistMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://1099desk.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.1099desk.com"),
   title: "1099desk | Freelancer Tax, Rate, and Invoice Calculators for 1099 Workers",
   description: "Estimate self-employment tax, quarterly payments, freelance rates, project margins, and invoices with privacy-aware calculators for US freelancers and 1099 workers.",
   alternates: { canonical: "/" },
@@ -49,10 +49,35 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   const cookieYesId = process.env.NEXT_PUBLIC_COOKIEYES_ID;
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.1099desk.com";
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        name: "1099desk",
+        url: siteUrl,
+        email: "m.ahmedhussain9@gmail.com",
+      },
+      {
+        "@type": "WebSite",
+        name: "1099desk",
+        url: siteUrl,
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${siteUrl}/blog?query={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
+      },
+    ],
+  };
 
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
+        <Script id="organization-schema" type="application/ld+json" strategy="beforeInteractive">
+          {JSON.stringify(organizationSchema)}
+        </Script>
         {cookieYesId ? (
           <Script
             src={`https://cdn.cookieyes.com/client_data/${cookieYesId}/script.js`}

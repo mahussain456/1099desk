@@ -1,4 +1,13 @@
+import type { Metadata } from "next";
+
 const partners = ["FreshBooks", "QuickBooks", "Wave", "Keeper Tax", "TurboTax"];
+
+export const metadata: Metadata = {
+  title: "Affiliate Disclosure | 1099desk",
+  description:
+    "Read the 1099desk affiliate disclosure and how commissions may apply to certain partner links.",
+  alternates: { canonical: "/affiliate-disclosure" },
+};
 
 export default function AffiliateDisclosurePage() {
   return (

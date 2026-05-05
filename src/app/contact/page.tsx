@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact 1099desk | Support, Privacy, and Partnerships",
+  description:
+    "Contact 1099desk for calculator feedback, privacy requests, partnership questions, or site support.",
+  alternates: { canonical: "/contact" },
+};
+
 export default function ContactPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-10 prose-readable">

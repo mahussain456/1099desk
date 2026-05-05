@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Terms of Use | 1099desk",
+  description:
+    "Review the 1099desk terms of use, limitations, dispute terms, and no-professional-advice disclaimer.",
+  alternates: { canonical: "/terms" },
+};
+
 export default function TermsPage() {
   return (
     <main className="mx-auto max-w-3xl px-4 py-10 prose-readable">
