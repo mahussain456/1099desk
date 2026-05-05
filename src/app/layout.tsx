@@ -20,9 +20,23 @@ const geistMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://1099desk.com"),
-  title: "1099desk - Financial Calculators for US Freelancers",
-  description: "Free estimated tax, invoice, rate, and project calculators for US freelancers.",
+  title: "1099desk | Freelancer Tax, Rate, and Invoice Calculators for 1099 Workers",
+  description: "Estimate self-employment tax, quarterly payments, freelance rates, project margins, and invoices with privacy-aware calculators for US freelancers and 1099 workers.",
   alternates: { canonical: "/" },
+  openGraph: {
+    title: "1099desk | Freelancer Tax, Rate, and Invoice Calculators",
+    description:
+      "Compliance-first tax, pricing, and invoicing tools for US freelancers and 1099 workers.",
+    url: "/",
+    siteName: "1099desk",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "1099desk | Freelancer Tax, Rate, and Invoice Calculators",
+    description:
+      "Estimate quarterly taxes, set freelance rates, compare 1099 vs W2, and generate invoices privately in your browser.",
+  },
   verification: {
     google: "uYoesI3DN-5IxZxUoneJdKRgIqQq2O2ox3tpDFfkjZU",
   },
@@ -62,7 +76,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div className="flex flex-wrap items-center gap-2 text-sm font-bold">
               <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/self-employment-tax-calculator">SE Tax</a>
               <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/quarterly-estimated-tax-calculator">Quarterly Tax</a>
+              <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/freelance-hourly-rate-calculator">Rate</a>
               <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/invoice-generator">Invoice</a>
+              <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/blog">Guides</a>
               <a className="rounded-md px-3 py-2 text-slate-700 no-underline hover:bg-slate-100" href="/about">About</a>
               <span className="hidden items-center gap-2 rounded-md border border-teal-700/20 bg-teal-50 px-3 py-2 text-teal-900 md:inline-flex">
                 <ShieldCheck aria-hidden="true" className="h-4 w-4" />

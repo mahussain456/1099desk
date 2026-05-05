@@ -3,6 +3,7 @@ import {
   ArrowRight,
   BadgeCheck,
   BookOpenCheck,
+  BookText,
   BriefcaseBusiness,
   Calculator,
   CheckCircle2,
@@ -57,6 +58,24 @@ const planningRows = [
   ["Expenses", "$18,400", "deductible"],
   ["Estimated total tax", "$21,793", "result"],
   ["Quarterly reserve", "$5,448", "planning"],
+];
+
+const guideCards = [
+  [
+    "How much should freelancers set aside for taxes?",
+    "Use a practical reserve system before quarterly payments sneak up on you.",
+    "/blog/how-much-should-freelancers-set-aside-for-taxes",
+  ],
+  [
+    "Freelance hourly rate guide",
+    "Turn income goals, time off, and non-billable hours into a defensible target rate.",
+    "/blog/freelance-hourly-rate-guide",
+  ],
+  [
+    "Quarterly tax guide for 1099 workers",
+    "A plain-English planning guide for estimated payments, safe harbor rules, and cash flow.",
+    "/blog/quarterly-tax-guide-for-1099-workers",
+  ],
 ];
 
 export default function Home() {
@@ -348,6 +367,40 @@ export default function Home() {
 
       <section id="freelancer-checklist" className="mx-auto max-w-6xl px-4 pb-16">
         <EmailCapture />
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-20" aria-labelledby="guides-heading">
+        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="kicker">
+              <BookText aria-hidden="true" className="h-4 w-4" />
+              Search-ready guides
+            </p>
+            <h2 id="guides-heading" className="mt-4 text-4xl font-black leading-tight text-slate-950">
+              Learn the math behind the calculators
+            </h2>
+            <p className="mt-4 max-w-3xl text-base leading-7 text-slate-600">
+              These guide pages answer the exact questions freelancers search before they trust a calculator,
+              subscribe, or buy templates.
+            </p>
+          </div>
+          <a href="/blog" className="inline-flex items-center gap-2 text-sm font-black text-slate-950 no-underline">
+            View all guides
+            <ArrowRight aria-hidden="true" className="h-4 w-4" />
+          </a>
+        </div>
+        <div className="mt-8 grid gap-4 md:grid-cols-3">
+          {guideCards.map(([title, copy, href]) => (
+            <a key={href} href={href} className="premium-card rounded-xl p-5 text-slate-950 no-underline transition hover:-translate-y-0.5">
+              <p className="text-lg font-black">{title}</p>
+              <p className="mt-3 text-sm leading-6 text-slate-600">{copy}</p>
+              <span className="mt-5 inline-flex items-center gap-2 text-sm font-black text-teal-800">
+                Read guide
+                <ArrowRight aria-hidden="true" className="h-4 w-4" />
+              </span>
+            </a>
+          ))}
+        </div>
       </section>
     </main>
   );

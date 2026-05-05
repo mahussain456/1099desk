@@ -4,6 +4,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://1099desk.com";
   const paths = [
     "/",
+    "/blog",
+    "/blog/freelancer-tax-planning",
+    "/blog/how-much-should-freelancers-set-aside-for-taxes",
+    "/blog/freelance-hourly-rate-guide",
+    "/blog/quarterly-tax-guide-for-1099-workers",
     "/self-employment-tax-calculator",
     "/quarterly-estimated-tax-calculator",
     "/freelance-hourly-rate-calculator",
